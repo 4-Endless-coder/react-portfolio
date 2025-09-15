@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css';
 import Header from './Components/Header';
+import Hero from './Components/Hero';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div>
       <>
       <Header/>
+      <Hero/>
       </>
     </div>
   )
