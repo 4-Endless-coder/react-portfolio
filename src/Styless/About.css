@@ -1,0 +1,110 @@
+/* About Section */
+.about {
+    background-color: white;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+}
+
+.about-text {
+    max-width: 800px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.about-details {
+    margin-top: 30px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.detail-item:hover {
+    transform: translateX(10px);
+}
+
+.detail-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.detail-item span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Dark mode styles for about */
+.dark-mode .about {
+    background-color: #1a1a1a !important;
+    color: var(--dark-color);
+}
+
+.dark-mode .about-text {
+    background-color: transparent !important;
+    color: var(--dark-color);
+}
+
+.dark-mode .detail-item i {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-text p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .detail-item {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .detail-item:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 576px) {
+    .detail-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: rgba(74, 108, 247, 0.05);
+        transition: all 0.3s ease;
+    }
+    
+    .dark-mode .detail-item {
+        background-color: rgba(144, 202, 249, 0.1);
+    }
+    
+    .detail-item i {
+        margin-right: 0;
+        margin-bottom: 8px;
+        font-size: 1.8rem;
+    }
+    
+    .detail-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(74, 108, 247, 0.2);
+    }
+    
+    .dark-mode .detail-item:hover {
+        box-shadow: 0 5px 15px rgba(144, 202, 249, 0.2);
+    }
+}
